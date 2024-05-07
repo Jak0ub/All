@@ -26,7 +26,7 @@ while True:
 	try:
 		olas = int(olas)
 	except ValueError:
-		os.system("clear")
+		os.system("cls")
 		print("ZADEJ ČÍSLO")
 		time.sleep(1)
 		continue
