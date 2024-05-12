@@ -123,7 +123,7 @@ while i != olas:
 		chybas.append(custom)
 		chyby += 1
 		chybys += 1
-		os.system("cls")
+		os.system("clear")
 		print(f"Chyby: {chybys}")
 		while True:
 			odpoved = input(f"{jedna} {znamenko} {dva} = ")
