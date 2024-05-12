@@ -82,6 +82,12 @@ while i != olas:
 		dva = random.randint(1, 10)
 	if znamenko == "**":
 		dva = 2	
+		if obtiznost == 10:
+			jedna = random.randint(1, 10)
+		elif obtiznost == 100:
+			jedna = random.randint(1, 20)
+		elif obtiznost == 1000:
+			jedna = random.randint(1, 30)
 	stringa = f"{jedna} {znamenko} {dva}"
 
 	olaso = eval(stringa)
@@ -204,4 +210,4 @@ else:
 
 
 #Kroufek dne 22.3.2024		
-#Upraveno dne 10.5.2024
+#Upraveno dne 12.5.2024
