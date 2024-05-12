@@ -53,7 +53,7 @@ while True:
 		omo = "střední"
 		break
 	else:
-		os.system("cls")
+		os.system("clear")
 		print("Zadej jednu z obtížností!")
 		time.sleep(2)
 		os.system("clear")
