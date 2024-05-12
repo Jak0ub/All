@@ -3,6 +3,7 @@ import math
 import os
 import time
 i = 0
+
 status = []
 chybas = []
 vypocet = []
@@ -43,14 +44,17 @@ while True:
 	if osm.lower() == "lehká" or osm.lower() == "l" or osm.lower() == "lehka":
 		obtiznost = 10
 		omo = "lehká"
+		odm = 10
 		break
 	elif osm.lower() == "těžká" or osm.lower() == "t" or osm.lower() == "tezka":
 		obtiznost = 1000
+		odm = 30
 		omo = "těžká"
 		break
 	elif osm.lower() == "střední" or osm.lower() == "s" or osm.lower() == "stredni" or osm.lower() == "středni" or osm.lower() == "strední":
 		obtiznost = 100
 		omo = "střední"
+		odm = 20
 		break
 	else:
 		os.system("cls")
@@ -58,7 +62,11 @@ while True:
 		time.sleep(2)
 		os.system("cls")
 konec = False
-	
+k = 1
+odmocniny = []
+for j in range(1, odm):
+	k += 1
+	odmocniny.append(k ** 2)
 os.system("cls")	
 skips = 0
 print("3")
@@ -76,16 +84,40 @@ while i != olas:
 	priklados = time.time()
 	jedna = random.randint(1, obtiznost)
 	dva = random.randint(1, obtiznost)
-	seznam = ["+", "-", "*"]
+	seznam = ["+", "-", "*", "**", "√"]
 	znamenko = random.choice(seznam)
 	if znamenko == "*":
 		dva = random.randint(1, 10)
-	stringa = f"{jedna} {znamenko} {dva}"
-	olaso = eval(stringa)
-	answer.append(olaso)
-	status.append(stringa)
+	if znamenko == "**":
+		dva = 2	
+		if obtiznost == 10:
+			jedna = random.randint(1, 10)
+		elif obtiznost == 100:
+			jedna = random.randint(1, 20)
+		elif obtiznost == 1000:
+			jedna = random.randint(1, 30)
+		stringa = f"{jedna} ** 2"
+	elif znamenko == "√":
+		jedna = random.choice(odmocniny)
+		stringa2 = f"√{jedna}"
+		status.append(stringa2)
+		olaso = math.sqrt(jedna)
+		answer.append(olaso)
+	else:	
+		stringa = f"{jedna} {znamenko} {dva}"
+	if znamenko != "√":
+		olaso = eval(stringa)
+		answer.append(olaso)
+		if znamenko == "**":
+			stringa = f"{jedna}²"
+		status.append(stringa)
 	while True:
-		odpoved = input(f"{jedna} {znamenko} {dva} = ")
+		if znamenko == "**":
+			odpoved = input(f"{jedna}²= ")
+		elif znamenko == "√":
+			odpoved = input(f"√{jedna}= ")
+		else:
+			odpoved = input(f"{jedna} {znamenko} {dva} = ")
 		try:
 			odpoved = float(odpoved)
 		except ValueError:
@@ -113,10 +145,17 @@ while i != olas:
 		casy.append(jednotlivec)
 		vypocet.append("skip")
 		continue
+	if znamenko != "√":
+		string = f"{jedna} {znamenko} {dva}"
+		vysledek = eval(string)
+		if znamenko != "²" or znamenko != "√":
+			custom = f"{jedna} {znamenko} {dva} = {vysledek}"
+		elif znamenko == "²":
+			custom = f"{jedna}² = {vysledek}"
+	elif znamenko == "√":
+		vysledek = math.sqrt(jedna)
+		custom = f"√{jedna} = {vysledek}"
 		
-	string = f"{jedna} {znamenko} {dva}"
-	vysledek = eval(string)
-	custom = f"{jedna} {znamenko} {dva} = {vysledek}"
 	if odpoved == vysledek:
 		pass
 	else:
@@ -126,7 +165,12 @@ while i != olas:
 		os.system("cls")
 		print(f"Chyby: {chybys}")
 		while True:
-			odpoved = input(f"{jedna} {znamenko} {dva} = ")
+			if znamenko == "**":
+				odpoved = input(f"{jedna}²= ")
+			elif znamenko == "√":
+				odpoved = input(f"√{jedna}= ")
+			else:
+				odpoved = input(f"{jedna} {znamenko} {dva} = ")
 			try:
 				odpoved = int(odpoved)
 			except ValueError:
@@ -168,7 +212,7 @@ else:
 	if skips > 0:
 		print(f"KONEČNÉ VÝSLEDKY:\nObtížnost: {omo}\nPříklady: {olas}\nChyby: {chybys}\nČas bez přeskočení: {final}\nKonečný čas: {konec} s\nPřeskočení: {skips} ")
 	else:
-		print(f"KONEČNÉ VÝSLEDKY:Obtížnost: {omo}\nPříklady: {olas}\nChyby: {chybys}\nKonečný čas: {konec}")
+		print(f"KONEČNÉ VÝSLEDKY:\nObtížnost: {omo}\nPříklady: {olas}\nChyby: {chybys}\nKonečný čas: {konec}")
 
 	losos = input("\n\nchceš zobrazit statistiky?\nA|N: ")
 	if losos.lower() == "a":
@@ -196,4 +240,5 @@ else:
 
 
 #Kroufek dne 22.3.2024		
-#Upraveno dne 28.4.2024
+#Upraveno dne 12.5.2024
+#Dne 12.5.2024 -> přidána funkce mocnin a odmocnin
