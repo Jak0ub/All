@@ -76,16 +76,24 @@ while i != olas:
 	priklados = time.time()
 	jedna = random.randint(1, obtiznost)
 	dva = random.randint(1, obtiznost)
-	seznam = ["+", "-", "*"]
+	seznam = ["+", "-", "*", "**"]
 	znamenko = random.choice(seznam)
 	if znamenko == "*":
 		dva = random.randint(1, 10)
+	if znamenko == "**":
+		dva = 2	
 	stringa = f"{jedna} {znamenko} {dva}"
+
 	olaso = eval(stringa)
+	if znamenko == "**":
+		stringa = f"{jedna}²"
 	answer.append(olaso)
 	status.append(stringa)
 	while True:
-		odpoved = input(f"{jedna} {znamenko} {dva} = ")
+		if znamenko == "**":
+			odpoved = input(f"{jedna}²= ")
+		else:
+			odpoved = input(f"{jedna} {znamenko} {dva} = ")
 		try:
 			odpoved = float(odpoved)
 		except ValueError:
@@ -168,7 +176,7 @@ else:
 	if skips > 0:
 		print(f"KONEČNÉ VÝSLEDKY:\nObtížnost: {omo}\nPříklady: {olas}\nChyby: {chybys}\nČas bez přeskočení: {final}\nKonečný čas: {konec} s\nPřeskočení: {skips} ")
 	else:
-		print(f"KONEČNÉ VÝSLEDKY:Obtížnost: {omo}\nPříklady: {olas}\nChyby: {chybys}\nKonečný čas: {konec}")
+		print(f"KONEČNÉ VÝSLEDKY:\nObtížnost: {omo}\nPříklady: {olas}\nChyby: {chybys}\nKonečný čas: {konec}")
 
 	losos = input("\n\nchceš zobrazit statistiky?\nA|N: ")
 	if losos.lower() == "a":
@@ -196,4 +204,4 @@ else:
 
 
 #Kroufek dne 22.3.2024		
-#Upraveno dne 28.4.2024
+#Upraveno dne 10.5.2024
