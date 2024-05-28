@@ -308,6 +308,7 @@ if developer == True:
 								radky[11] = f"{oks}={ci2}\n"
 							with open("config.txt", "w", encoding="utf-8") as file:
 								file.writelines(radky)
+							animace_zmeny()
 						elif inp.lower() == "3:nickname":
 							while True:
 								cls()
@@ -325,7 +326,7 @@ if developer == True:
 							with open("config.txt", "w", encoding="utf-8") as file:
 								file.writelines(radky)
 							animace_zmeny()
-							animace_zmeny()
+
 						elif inp.lower() == "1:range":
 							while True:
 								cls()
