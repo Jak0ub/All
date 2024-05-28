@@ -1054,4 +1054,3 @@ else:
 #Dne 12.5.2024 -> přidána funkce mocnin a odmocnin
 #Dne 15.5-X.X.2024 -> přidána funkce dev.tools!
 #Dne 27.5.2024 -> Přidána Kontrola Souboru
-
