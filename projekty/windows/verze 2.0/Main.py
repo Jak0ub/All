@@ -102,6 +102,7 @@ try:
 			elif radky[0].lower().strip() == "ne":
 				developer = False
 			else:
+				hlaseni = f"Na první řádce není ANO nebo NE"
 				soubor_poskozen()
 		except IndexError:
 			hlaseni = f"První řádek neobsahuje ANO nebo NE! "
