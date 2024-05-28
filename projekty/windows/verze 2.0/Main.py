@@ -219,6 +219,9 @@ except FileNotFoundError:
 			radky[7] = "3:OFF\n"
 			radky[8] = "1=10\n"
 			radky[9] = "2=20\n"
+			radky[10] = "Lehká=1-10\n"
+			radky[11] = "Střední=10-100\n"
+			radky[12] = "Těžká=100-1000\n"
 		with open("config.txt", "w", encoding="utf-8") as file:
 			file.writelines(radky)
 		animace_zmeny()
