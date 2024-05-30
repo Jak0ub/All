@@ -17,6 +17,61 @@ answer = []
 jop = []
 casy = []
 lima = []
+#Úvodní načtení
+os.system("cls")
+print("""     
+__________        ___          __  ___     _________     __     __    ______
+\_______  |      /   \        |  |/  /    /   ___   \   |  |   |  |  |   __ \ 
+       |  |     /  _  \       |  |  /     |  |   |  |   |  |   |  |  |  |__| |
+       |  |    /  /_\  \      |    /      |  |   |  |   |  |   |  |  |    __/
+       |  |   /  _____  \     |    \      |  |   |  |   |  |   |  |  |   _  \ 
+ ____  /  |  /  /     \  \    |  |  \     |  |   |  |   |  |   |  |  |  | \  \      
+ \   \/  /  /  /       \  \   |  |\  \    |  |___|  |   |  \___/  |  |  |__|  |     
+  \_____/  /__/         \__\  |__| \__\   \_________/   \_________/  |_______/     
+       
+""")
+time.sleep(0.6)
+os.system("cls")
+print("""     
+__________        ___          __  ___     _________     __     __    ______
+\_______  |      /   \        |  |/  /    /   ___   \   |  |   |  |  |   __ \ 
+       |  |     /  _  \       |  |  /     |  |   |  |   |  |   |  |  |  |__| |
+       |  |    /  /_\  \      |    /      |  |   |  |   |  |   |  |  |    __/
+       |  |   /  _____  \     |    \      |  |   |  |   |  |   |  |  |   _  \ 
+ ____  /  |  /  /     \  \    |  |  \     |  |   |  |   |  |   |  |  |  | \  \       __
+ \   \/  /  /  /       \  \   |  |\  \    |  |___|  |   |  \___/  |  |  |__|  |     /  \ 
+  \_____/  /__/         \__\  |__| \__\   \_________/   \_________/  |_______/      \__/
+       
+""")
+time.sleep(0.6)
+os.system("cls")
+print("""     
+__________        ___          __  ___     _________     __     __    ______
+\_______  |      /   \        |  |/  /    /   ___   \   |  |   |  |  |   __ \ 
+       |  |     /  _  \       |  |  /     |  |   |  |   |  |   |  |  |  |__| |
+       |  |    /  /_\  \      |    /      |  |   |  |   |  |   |  |  |    __/
+       |  |   /  _____  \     |    \      |  |   |  |   |  |   |  |  |   _  \ 
+ ____  /  |  /  /     \  \    |  |  \     |  |   |  |   |  |   |  |  |  | \  \     __    __
+ \   \/  /  /  /       \  \   |  |\  \    |  |___|  |   |  \___/  |  |  |__|  |   /  \  /  \ 
+  \_____/  /__/         \__\  |__| \__\   \_________/   \_________/  |_______/    \__/  \__/
+       
+""")
+time.sleep(0.6)
+os.system("cls")
+print("""     
+__________        ___          __  ___     _________     __     __    ______
+\_______  |      /   \        |  |/  /    /   ___   \   |  |   |  |  |   __ \ 
+       |  |     /  _  \       |  |  /     |  |   |  |   |  |   |  |  |  |__| |
+       |  |    /  /_\  \      |    /      |  |   |  |   |  |   |  |  |    __/
+       |  |   /  _____  \     |    \      |  |   |  |   |  |   |  |  |   _  \ 
+ ____  /  |  /  /     \  \    |  |  \     |  |   |  |   |  |   |  |  |  | \  \     __    __    __
+ \   \/  /  /  /       \  \   |  |\  \    |  |___|  |   |  \___/  |  |  |__|  |   /  \  /  \  /  \ 
+  \_____/  /__/         \__\  |__| \__\   \_________/   \_________/  |_______/    \__/  \__/  \__/ 
+       
+""")
+time.sleep(0.6)
+os.system("cls")
+#Konec úvodního načítání
 chyby = 0
 chybys = 0
 rak = 0
@@ -26,6 +81,7 @@ hlaseni = "NIC NEOBSAHUJE"
 developer = False
 otz = "nic"
 zpet = False
+#definice
 def soubor_poskozen():
 	OLA = input(f"Konfigurační soubor je poškozen!\n\n|Hlášení|:{hlaseni} ")
 	if OLA.lower() == "remake":
@@ -381,6 +437,7 @@ if developer == True:
 								radky[10]= f"{ob1}={inp2}-{inp3}\n"
 							with open("config.txt", "w", encoding="utf-8") as file:
 								file.writelines(radky)
+							animace_zmeny()
 						elif inp.lower() == "2:range":
 							while True:
 								cls()
@@ -434,6 +491,7 @@ if developer == True:
 								radky[11]= f"{ob2}={inp2}-{inp3}\n"
 							with open("config.txt", "w", encoding="utf-8") as file:
 								file.writelines(radky)
+							animace_zmeny()
 						elif inp.lower() == "3:range":
 							while True:
 								cls()
@@ -487,6 +545,7 @@ if developer == True:
 								radky[12]= f"{ob3}={inp2}-{inp3}\n"
 							with open("config.txt", "w", encoding="utf-8") as file:
 								file.writelines(radky)
+							animace_zmeny()
 						else:
 							cls()
 							print("neznám")
@@ -1059,3 +1118,4 @@ else:
 #Dne 12.5.2024 -> přidána funkce mocnin a odmocnin
 #Dne 15.5-X.X.2024 -> přidána funkce dev.tools!
 #Dne 27.5.2024 -> Přidána Kontrola Souboru
+#Dne 30.5.2024 -> přidána úvodní obrazovka
