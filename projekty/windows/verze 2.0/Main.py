@@ -3,6 +3,7 @@ import math
 import os
 import time
 import sys
+os.system("title Matematika")
 i = 0
 list_pocet = []
 post = 0
