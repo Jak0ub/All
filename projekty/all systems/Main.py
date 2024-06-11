@@ -1128,3 +1128,4 @@ else:
 #Dne 15.5-X.X.2024 -> přidána funkce dev.tools!
 #Dne 27.5.2024 -> Přidána Kontrola Souboru
 #Dne 30.5.2024 -> přidána úvodní obrazovka
+#Dne 11.6.2024 -> přidáno rozšíření pro všechny systémy, již není potřeba instalovat projekt jednotlivě na různé systémy, stačí jeden soubor na všechny systémy
