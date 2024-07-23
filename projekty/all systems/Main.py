@@ -333,8 +333,12 @@ if developer == True:
 							ci2 = radky[11].strip().split("=")[1]
 							ob3 = radky[12].strip().split("=")[0]
 							ci3 = radky[12].strip().split("=")[1]
-						print(f"Aktuální obtížnosti\n|{ob1} -> {ci1}|\n|{ob2} -> {ci2}|\n|{ob3} -> {ci3}|")
-						inp = input("\n\nZadejte operaci:\n|cislo:nickname -> změna pojmenování obtížnosti|\n|cislo:range -> změna rozmezí|\n|exit -> zpět do menu|\n")
+						if ob1.lower()[0] != ob2.lower()[0] and ob2.lower()[0] != ob3.lower()[0] and ob1.lower()[0] != ob3.lower()[0]:
+							tetok = "Povoleno"
+						else:
+							tetok = "Zakázáno"
+						print(f"Aktuální obtížnosti\n|{ob1} -> {ci1}|\n|{ob2} -> {ci2}|\n|{ob3} -> {ci3}|\n\nInformace\n|Specifikace pomocí prvního písmene obtížnosti| -> |{tetok}|")
+						inp = input("\n\nOperace:\n|cislo:nickname -> změna pojmenování obtížnosti|\n|cislo:range -> změna rozmezí|\n|exit -> zpět do menu|\n")
 						if inp.lower() == "exit":
 							break
 						elif inp.lower() == "1:nickname":
@@ -346,8 +350,16 @@ if developer == True:
 									print("Toto jméno je již používáno(Nezáleží na CapsLocku-> AHOJ=ahoj)")
 									time.sleep(3)
 									continue
-								else:
+								if oks.lower()[0] != ob2.lower()[0] and ob2.lower()[0] != ob3.lower()[0] and oks.lower()[0] != ob3.lower()[0]:
 									break
+								else:
+									cls()
+									print("Pozor, nějaké obtížnosti začínají na stejné písmeno. Funkce specifikování názvu obtížnosti je tedy zakánána!!\n|Back| -> |znovuspecifikování obtížnosti|\n|Enter| -> |pokračovat|\n")
+									dehok = input()
+									if dehok.lower() == "back":
+										continue
+									else:
+										break
 							with open("config.txt", "r", encoding="utf-8") as file:
 								radky = file.readlines()
 								radky[10] = f"{oks}={ci1}\n"
@@ -363,8 +375,16 @@ if developer == True:
 									print("Toto jméno je již používáno(Nezáleží na CapsLocku-> AHOJ=ahoj)")
 									time.sleep(3)
 									continue
-								else:
+								if ob1.lower()[0] != oks.lower()[0] and oks.lower()[0] != ob3.lower()[0] and ob1.lower()[0] != ob3.lower()[0]:
 									break
+								else:
+									cls()
+									print("Pozor, nějaké obtížnosti začínají na stejné písmeno. Funkce specifikování názvu obtížnosti je tedy zakánána!!\n|Back| -> |znovuspecifikování obtížnosti|\n|Enter| -> |pokračovat|\n")
+									dehok = input()
+									if dehok.lower() == "back":
+										continue
+									else:
+										break
 							with open("config.txt", "r", encoding="utf-8") as file:
 								radky = file.readlines()
 								radky[11] = f"{oks}={ci2}\n"
@@ -380,8 +400,16 @@ if developer == True:
 									print("Toto jméno je již používáno(Nezáleží na CapsLocku-> AHOJ=ahoj)")
 									time.sleep(3)
 									continue
-								else:
+								if ob1.lower()[0] != ob2.lower()[0] and ob2.lower()[0] != oks.lower()[0] and ob1.lower()[0] != oks.lower()[0]:
 									break
+								else:
+									cls()
+									print("Pozor, nějaké obtížnosti začínají na stejné písmeno. Funkce specifikování názvu obtížnosti je tedy zakánána!!\n|Back| -> |znovuspecifikování obtížnosti|\n|Enter| -> |pokračovat|\n")
+									dehok = input()
+									if dehok.lower() == "back":
+										continue
+									else:
+										break
 							with open("config.txt", "r", encoding="utf-8") as file:
 								radky = file.readlines()
 								radky[12] = f"{oks}={ci3}\n"
@@ -911,32 +939,60 @@ with open("config.txt", "r", encoding="utf-8") as file:
 	os1 = int(radky[10].strip().split("-")[1])
 	os2 = int(radky[11].strip().split("-")[1])
 	os3 = int(radky[12].strip().split("-")[1])
-	
+if ob1.lower()[0] != ob2.lower()[0] and ob2.lower()[0] != ob3.lower()[0] and ob1.lower()[0] != ob3.lower()[0]:
+	Enabled_first_lttr = "Povoleno"
+else:
+	Enabled_first_lttr = "Zakázáno"	
 while True:
-	osm = input(f"Jakou chceš obtížnost?\n{ob1} -> čísla od {ci1}\n{ob2} -> čísla od {ci2}\n{ob3} -> čísla od {ci3}\n|{ob1}|{ob2}|{ob3}|: ")
-	if osm.lower() == ob1.lower():
-		obtiznost = os1
-		omo = f"{ob1}"
-		odm = 10
-		jedos = int(num1)
-		break
-	elif osm.lower() == ob3.lower():
-		obtiznost = os3
-		odm = 30
-		jedos = int(num3)
-		omo = f"{ob3}"
-		break
-	elif osm.lower() == ob2.lower():
-		obtiznost = os2
-		omo = f"{ob2}"
-		odm = 20
-		jedos = int(num2)
-		break
-	else:
-		cls()
-		print("Zadej jednu z obtížností!")
-		time.sleep(2)
-		cls()
+	osm = input(f"Jakou chceš obtížnost?\n{ob1} -> čísla od {ci1}\n{ob2} -> čísla od {ci2}\n{ob3} -> čísla od {ci3}\n\n|Možnost specifikování obtížnosti pomocí prvního písmene| |{Enabled_first_lttr}|\n")
+	if Enabled_first_lttr == "Povoleno":
+		if osm.lower() == ob1.lower() or osm.lower() == ob1.lower()[0]:
+			obtiznost = os1
+			omo = f"{ob1}"
+			odm = 10
+			jedos = int(num1)
+			break
+		elif osm.lower() == ob3.lower() or osm.lower() == ob3.lower()[0]:
+			obtiznost = os3
+			odm = 30
+			jedos = int(num3)
+			omo = f"{ob3}"
+			break
+		elif osm.lower() == ob2.lower() or osm.lower() == ob2.lower()[0]:
+			obtiznost = os2
+			omo = f"{ob2}"
+			odm = 20
+			jedos = int(num2)
+			break
+		else:
+			cls()
+			print("Zadej jednu z obtížností!")
+			time.sleep(2)
+			cls()
+	elif Enabled_first_lttr == "Zakázáno":
+		if osm.lower() == ob1.lower():
+			obtiznost = os1
+			omo = f"{ob1}"
+			odm = 10
+			jedos = int(num1)
+			break
+		elif osm.lower() == ob3.lower():
+			obtiznost = os3
+			odm = 30
+			jedos = int(num3)
+			omo = f"{ob3}"
+			break
+		elif osm.lower() == ob2.lower():
+			obtiznost = os2
+			omo = f"{ob2}"
+			odm = 20
+			jedos = int(num2)
+			break
+		else:
+			cls()
+			print("Zadej jednu z obtížností!")
+			time.sleep(2)
+			cls()		
 konec = False
 k = 1
 odmocniny = []
@@ -1126,3 +1182,4 @@ else:
 #Dne 30.5.2024 -> přidána úvodní obrazovka
 #Dne 11.6.2024 -> přidáno rozšíření pro všechny systémy, již není potřeba instalovat projekt jednotlivě na různé systémy, stačí jeden soubor na všechny systémy
 #Dne 22.7.2024 -> Úprava načítacího loga
+#Dne 23.7.2024 -> Přidána funkce specifikování obtížnosti pomocí prvního písmene
