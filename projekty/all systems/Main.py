@@ -91,7 +91,7 @@ def soubor_poskozen():
 	OLA = input(f"Konfigurační soubor je poškozen!\n\n|Hlášení|:{hlaseni} ")
 	if OLA.lower() == "remake":
 		f = open("config.txt", "a")
-		f.write("\n\n\n\n\n\n\n\n\n")
+		f.write("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 		f.close()
 		with open("config.txt", "r", encoding="utf-8") as file:
 			radky = file.readlines()
@@ -108,6 +108,7 @@ def soubor_poskozen():
 			radky[10] = "Lehká=1-10\n"
 			radky[11] = "Střední=10-100\n"
 			radky[12] = "Těžká=100-1000\n"
+			radky[13] = "End=Nevadí, zkus trochu lehčí obtížnost :)"
 		with open("config.txt", "w", encoding="utf-8") as file:
 			file.writelines(radky)
 		animace_zmeny()
@@ -154,6 +155,7 @@ try:
 			ok11 = radky[10]
 			ok12 = radky[11]
 			ok13 = radky[12]
+			ok14 = radky[13]
 		except IndexError:
 			hlaseni = "Někde něco kompletně chybí! "
 			soubor_poskozen()
@@ -258,6 +260,17 @@ try:
 		elif twelve_2 <= 0 or twelve_1 <= 0:
 			hlaseni = f"12.řádek nesmí obsahovat číslo menší nebo rovno nule VZOR:|EASY=1-10|"
 			soubor_poskozen()
+		if ok14.strip() == "":
+			hlaseni = "14.řádek neobsahuje nic, VZOR:|end=text|"
+			soubor_poskozen()
+		try:
+			ok14_1 = ok14.strip().split("=")[0]
+		except IndexError:
+			hlaseni = ("14.řádek je kompletně špatně, VZOR:|end=text|")
+			soubor_poskozen()
+		if ok14_1.lower() != "end":
+			hlaseni = ("14.řádek nezačíná na end, VZOR:|end=text|")
+			soubor_poskozen()
 		
 		
 		
@@ -284,6 +297,7 @@ except FileNotFoundError:
 			radky[10] = "Lehká=1-10\n"
 			radky[11] = "Střední=10-100\n"
 			radky[12] = "Těžká=100-1000\n"
+			radky[13] = "End=Nevadí, zkus trochu lehčí obtížnost :)"
 		with open("config.txt", "w", encoding="utf-8") as file:
 			file.writelines(radky)
 		animace_zmeny()
@@ -320,7 +334,7 @@ if developer == True:
 			while True:
 				post = 0
 				cls()
-				menu = input("Zadejte jednu z možností:\n\n|Testovací spuštění -> dev.tools:testrun|\n|Úprava obtížností -> dev.tools:diff|\n|Úprava penalizace za přeskočení -> dev.tools:skip|\n|Úprava možnosti počtu příkladů -> dev.tools:count|\n|Vypnutí/Úprava jednotlivých informačních zpráv -> dev.tools:inform|\n|exit z menu -> exit|\n")
+				menu = input("Zadejte jednu z možností:\n\n|Testovací spuštění -> dev.tools:testrun|\n|Úprava obtížností -> dev.tools:diff|\n|Úprava penalizace za přeskočení -> dev.tools:skip|\n|Úprava možnosti počtu příkladů -> dev.tools:count|\n|Vypnutí/Úprava jednotlivých informačních zpráv -> dev.tools:inform|\n|Úprava zprávy při předčasném ukončení programu -> dev.tools:ending|\n|exit z menu -> exit|\n")
 				kontrola_konec(menu)
 				if menu.lower() == "dev.tools:diff":
 					while True:
@@ -585,6 +599,31 @@ if developer == True:
 							time.sleep(1)
 							cls()
 							continue
+				elif menu.lower() == "dev.tools:ending":
+					while True:
+						cls()
+						with open("config.txt", "r", encoding="utf-8") as file:
+							radky = file.readlines()
+							konec_zprava_edit = radky[13].strip().split("=")[1]
+							print(f"Aktuální konečná zpráva\n|{konec_zprava_edit}|")
+							choice_1 = input("\n\nMožnosti\n|Úprava zprávy -> edit|\n|exit -> zpět do menu|\n|inform -> Získání informací k tomuto nástroji|\n")
+						if choice_1.lower() == "edit":
+								cls()
+								editace_1 = input("Zadej novou zprávu(může být prázdné pro nevypsání ničeho): ")
+								with open("config.txt", "w", encoding="utf-8") as file:
+										radky[13] = f"end={editace_1}\n"
+										file.writelines(radky)
+										animace_zmeny()
+										continue
+						elif choice_1.lower() == "exit":
+								cls()
+								break
+						elif choice_1.lower() == "inform":
+								cls()
+								print("Informace:\n|Jedná se o zprávu, která se vypíše, když uživatel zadá příkaz končim nebo koncim, při loopu počítání příkladů|\n|Pokud pouze stisknete Enter pri editaci zpravy, tak se nic nevypíše při předčasném skončení počítání|\n")
+								input("\n\nEnter pro pokračování")
+								cls()
+								continue
 				elif menu.lower() == "dev.tools:testrun":
 					cls()
 					print("Jdeme na to!")
@@ -1011,7 +1050,9 @@ print("1")
 time.sleep(1)
 cls()
 start = time.time()
-
+with open("config.txt", "r", encoding="utf-8") as file:
+		radky = file.readlines()
+		konec_zprava = radky[13].strip().split("=")[1]
 while i != olas:
 	chyby = 0
 	priklados = time.time()
@@ -1137,8 +1178,11 @@ while i != olas:
 	casy.append(jednotlivec)
 	vypocet.append(chyby)
 	print(f"Skvěle, máš {i}/{olas} příkladů")
-if konec == True:
-	print("Nevadí, zkus trochu lehčí obtížnost :)")
+if konec == True and konec_zprava != "":
+	print(konec_zprava)
+	time.sleep(1)
+elif konec_zprava == "":
+		pass
 else:
 	konec = time.time()
 	final = round(konec - start, 2)
@@ -1161,7 +1205,7 @@ else:
 				print(f"{y+1}.příklad:\n\n{status[y]} = {answer[y]}\nVypočteno bez chyby\nčas: {casy[y]}")
 			else:
 				print(f"{y+1}.příklad:\n\n{status[y]} = {answer[y]}\nPočet chyb: {vypocet[y]}\nčas: {casy[y]}")
-			input()
+			input("\n\nEnter pro pokračování")
 			y += 1
 	elif losos.lower() == "n":
 		cls()
@@ -1183,3 +1227,4 @@ else:
 #Dne 11.6.2024 -> přidáno rozšíření pro všechny systémy, již není potřeba instalovat projekt jednotlivě na různé systémy, stačí jeden soubor na všechny systémy
 #Dne 22.7.2024 -> Úprava načítacího loga
 #Dne 23.7.2024 -> Přidána funkce specifikování obtížnosti pomocí prvního písmene
+#Dne 24.7.2024 -> Přidána funkce úpravy zprávy při použití příkazu koncim uzivatelem
