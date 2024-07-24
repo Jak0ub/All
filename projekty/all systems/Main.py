@@ -326,7 +326,7 @@ if developer == True:
 			with open("config.txt", "w", encoding="utf-8") as dev:
 				dev.writelines(radky)
 			animace_zmeny()
-			input("Pro zapnutí napište při uvítací zprávě(dev.tools:turn_on)")
+			input("Pro zapnutí napište při zadávání počtu příkladů zprávu 'dev.tools:turn_on'")
 			sys.exit()	
 		elif dev_tools.lower() == "koncim" or dev_tools.lower() == "končim":
 			sys.exit()
@@ -931,14 +931,7 @@ if developer == False or testrun == True:
 					cls()
 					uvodni_text = (uvod.split("UV:")[1].strip())
 					mozne = input(f"{uvodni_text}")
-					if mozne == "dev.tools:turn_on":
-						with open("config.txt", "r", encoding="utf-8") as file:
-							radky = file.readlines()
-							radky[0] = "ANO\n"
-						with open("config.txt", "w", encoding="utf-8") as file:
-							file.writelines(radky)
-							animace_zmeny()
-							sys.exit()
+					input("\nEnter pro pokracovani")
 cls()
 while True:
 	cls()
@@ -947,6 +940,14 @@ while True:
 		jednicka = radky[8].strip().split("1=")[1]
 		dvojka = radky[9].strip().split("2=")[1]
 	olas = input(f"Kolik chceš příkladů?\n|{jednicka}-{dvojka}| ")
+	if olas.lower() == "dev.tools:turn_on":
+		with open("config.txt", "r", encoding="utf-8") as file:
+			radky = file.readlines()
+			radky[0] = "ANO\n"
+		with open("config.txt", "w", encoding="utf-8") as file:
+			file.writelines(radky)
+			animace_zmeny()
+			sys.exit()
 	jednicka = int(jednicka)
 	dvojka = int(dvojka)
 	try:
@@ -1179,6 +1180,7 @@ while i != olas:
 	vypocet.append(chyby)
 	print(f"Skvěle, máš {i}/{olas} příkladů")
 if konec == True and konec_zprava != "":
+	cls()
 	print(konec_zprava)
 	time.sleep(1)
 elif konec_zprava == "":
@@ -1227,4 +1229,4 @@ else:
 #Dne 11.6.2024 -> přidáno rozšíření pro všechny systémy, již není potřeba instalovat projekt jednotlivě na různé systémy, stačí jeden soubor na všechny systémy
 #Dne 22.7.2024 -> Úprava načítacího loga
 #Dne 23.7.2024 -> Přidána funkce specifikování obtížnosti pomocí prvního písmene
-#Dne 24.7.2024 -> Přidána funkce úpravy zprávy při použití příkazu koncim uzivatelem
+#Dne 24.7.2024 -> Přidána funkce úpravy zprávy při použití příkazu koncim uzivatelem & Úprava vypínání a zapínání developera. Nyní se zapína při zprávě kolik chceš příkladů
