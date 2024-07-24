@@ -930,7 +930,7 @@ if developer == False or testrun == True:
 				if radky[4+numero].strip() == f"{numero}:ON":
 					cls()
 					uvodni_text = (uvod.split("UV:")[1].strip())
-					mozne = input(f"{uvodni_text}")
+					print(f"{uvodni_text}")
 					input("\nEnter pro pokracovani")
 cls()
 while True:
