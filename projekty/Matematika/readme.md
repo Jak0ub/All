@@ -13,10 +13,13 @@ Jednoduše klikněte na projekt (funguje na všechny systémy) a stáhněte tzv.
 Za předpokladu, že jste developer, musíte uživateli poslat python soubor a konfigurační soubor("config.txt"). Nikdy u něj neměnte jméno. Uživatel musí mít nainstalovaný python. Na fukci pro jednoduchou distribuci se pracuje....
 
 ## Spouštění
-  
+
+Windows cmd
 ```batch
 Main.py
 ```
+Linux shell
 ```shell
 python3 Main.py
 ```
+!MUSÍM BÝT V ADRESÁŘI, KDE SE PYTHON SOUBOR NACHÁZÍ!
