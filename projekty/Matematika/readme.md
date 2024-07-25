@@ -14,3 +14,8 @@ Za předpokladu, že jste developer, musíte uživateli poslat python soubor a k
 
 ## Spouštění
   
+```batch
+Main.py
+
+```shell
+python3 Main.py
