@@ -22,4 +22,6 @@ Linux shell
 ```shell
 python3 Main.py
 ```
-!MUSÍM BÝT V ADRESÁŘI, KDE SE PYTHON SOUBOR NACHÁZÍ!
+> ⚠️ **Varování:**
+> Pro spuštění souboru musím být v adresáři, kde se python soubor nachází
+
