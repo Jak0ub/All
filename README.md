@@ -1,1 +1,1 @@
-# Zde jsou všechny Pytohn projekty
+# Zde jsou všechny Python projekty
