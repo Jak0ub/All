@@ -642,6 +642,10 @@ if developer == True:
 							cls()
 							print("|Jedná se o nástroj pro vypnutí nebo zapnutí možnosti mínusových výsledků|\n|Při možnosti edit se automaticky možnost změní na opačnou možnost než je možnost aktuální|\n")
 							input("\nEnter pro pokračování")
+						else:
+							cls()
+							print("Neznám")
+							time.sleep(2)
 
 
 					
@@ -1281,7 +1285,7 @@ else:
 
 
 #Kroufek dne 22.3.2024		
-#Upraveno dne 12.5.2024
+#Upraveno dne 25.7.2024
 #Dne 12.5.2024 -> přidána funkce mocnin a odmocnin
 #Dne 15.5-X.X.2024 -> přidána funkce dev.tools!
 #Dne 27.5.2024 -> Přidána Kontrola Souboru
