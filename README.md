@@ -1,4 +1,4 @@
-# Python
+# Matematika
 
 ## O projektu
 
