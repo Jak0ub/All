@@ -22,7 +22,7 @@ Linux shell
 ```shell
 python3 Main.py
 ```
-### Nebo lze jednoduše dvakrát kliknout na Windowsu
+### Lze také dvakrát kliknout na soubor u systému Windows
 > ⚠️ **Varování:**
 > Pro spuštění souboru musím být v adresáři, kde se python soubor nachází
 
