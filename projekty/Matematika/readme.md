@@ -16,6 +16,7 @@ Za předpokladu, že jste developer, musíte uživateli poslat python soubor a k
   
 ```batch
 Main.py
-
+```
 ```shell
 python3 Main.py
+```
