@@ -1,4 +1,4 @@
-##Možnosti
+## Možnosti
 Máte na výběr buď batch file nebo python file, oba fungují nezávisle na sobě
 
 ## Popis
