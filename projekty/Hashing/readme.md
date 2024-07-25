@@ -18,6 +18,7 @@ Linux shell
 ```shell
 python3 Python.py
 ```
+### Lze také dvakrát kliknout na soubor u systému Windows
 > ⚠️ **Varování:**
 > Pro spuštění souboru musím být v adresáři, kde se python soubor nachází
 
