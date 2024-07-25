@@ -4,6 +4,3 @@ Po každém zapnutí pc se zapne soubor troll.vbs a lze ho vypnout jen pomocí `
 
 ```batch
 taskkill /IM "wscript.exe" -F
-
-
-
