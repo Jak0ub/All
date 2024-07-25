@@ -1,1 +1,1 @@
-# Zde jsou všechny Python projekty
+# Hlavní adresář
