@@ -780,6 +780,10 @@ if developer == True:
 									input(f"Pokud máš v úvodních zprávách zmíněn čas přičtený za přeskočení\nUpdatuj tu změnu, aby uživatel vědel kolik je skutečná penalizace")
 									animace_zmeny()
 									break
+						else:
+							cls()
+							print("Neznám")
+							time.sleep(2)
 				elif menu.lower() == "dev.tools:inform":
 					cls()
 					while True:
@@ -939,6 +943,7 @@ if developer == True:
 								cls()
 								print("neznám")
 								time.sleep(2)
+								break
 								cls()
 							if znovu == True:
 								znovu = False
