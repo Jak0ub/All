@@ -10,7 +10,7 @@ Jednoduše klikněte na projekt (funguje na všechny systémy) a stáhněte tzv.
 
 ## Distribuování
 
-Za předpokladu, že jste developer, musíte uživateli poslat python soubor a konfigurační soubor("config.txt"). Nikdy u něj neměnte jméno. Uživatel musí mít nainstalovaný python. Na fukci pro jednoduchou distribuci se pracuje....
+Za předpokladu, že jste developer, musíte uživateli poslat python soubor a konfigurační soubor("config.txt"). Nikdy u `config.txt` neměnte jméno. Uživatel musí mít nainstalovaný python. Na fukci pro jednoduchou distribuci se pracuje....
 
 ## Spouštění
 
