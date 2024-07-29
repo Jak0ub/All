@@ -3,6 +3,8 @@
 ## O projektu
 
 Jednoduchý projekt v pythonu, který spočívá v počítání příkladů. Je zde však mnoho upravitelných funkcí a.....no, přesvěčte se sami
+> ⚠️ **Upozornění:**
+> Jedná se o soubor pro nastavování, soubor na samotnou hru s matematikou se Vám vytvoří po užití funkce distrib
 
 ## Stáhnutí
 
@@ -10,8 +12,7 @@ Jednoduše klikněte na projekt (funguje na všechny systémy) a stáhněte tzv.
 
 ## Distribuování
 
-Za předpokladu, že jste developer, musíte uživateli poslat python soubor a konfigurační soubor("config.txt"). Nikdy u `config.txt` neměnte jméno. Uživatel musí mít nainstalovaný python. Na fukci pro jednoduchou distribuci se pracuje....
-
+Za předpokladu, že jste developer, stačí si nastavit soubor podle svého gusta, a poté využít nové funkce na distribuci. Uživateli poté pošlete JEDEN soubor, který bude mít Vaše nastavení.
 ## Spouštění
 
 Windows cmd
