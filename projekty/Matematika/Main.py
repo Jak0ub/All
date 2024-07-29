@@ -639,9 +639,10 @@ ob2 = "{var7_name}"
 ci2 = "{var7_num}"
 ob3 = "{var8_name}"
 ci3 = "{var8_num}"
+konec_zprava = "{var9}"
 				""")
 					file.write(r"""
-konec_zprava = "Nevadí"
+
 os.system("title Matematika")
 platform_system = platform.system()
 if platform_system == "Windows":
