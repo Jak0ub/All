@@ -8,7 +8,7 @@ Jednoduchý projekt v pythonu, který spočívá v počítání příkladů. Je 
 
 ## Stáhnutí
 
-Jednoduše klikněte na projekt (funguje na všechny systémy) a stáhněte tzv."raw file". Samotný program Vám poté popíše co a jak
+Jednoduše klikněte na projekt `Main.py` (funguje na všechny systémy) a stáhněte tzv."raw file". Samotný program Vám poté popíše co a jak
 
 ## Distribuování
 
