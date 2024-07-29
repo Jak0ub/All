@@ -2,7 +2,7 @@
 
 ## O projektu
 
-Jednoduchý projekt v pythonu, který spočívá v počítání příkladů. Je zde však mnoho upravitelných funkcí a.....no, přesvěčte se sami
+Jednoduchý projekt v pythonu, který spočívá v počítání příkladů. Je zde však mnoho upravitelných funkcí a.....no, přesvědčte se sami
 > ⚠️ **Upozornění:**
 > Jedná se o soubor pro nastavování, soubor na samotnou hru s matematikou se Vám vytvoří po užití funkce distrib
 
