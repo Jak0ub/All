@@ -944,7 +944,7 @@ if konec == True and konec_zprava != "":
 	cls()
 	print(konec_zprava)
 	time.sleep(1)
-elif konec_zprava == "":
+elif konec == True and konec_zprava == "":
 		pass
 else:
 	konec = time.time()
@@ -2001,7 +2001,7 @@ if konec == True and konec_zprava != "":
 	cls()
 	print(konec_zprava)
 	time.sleep(1)
-elif konec_zprava == "":
+elif konec == True and konec_zprava == "":
 		pass
 else:
 	konec = time.time()
