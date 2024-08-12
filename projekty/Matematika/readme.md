@@ -10,6 +10,10 @@ Jednoduchý projekt v pythonu, který spočívá v počítání příkladů. Je 
 
 Jednoduše klikněte na projekt `Main.py` (funguje na všechny systémy) a stáhněte tzv."raw file". Samotný program Vám poté popíše co a jak
 
+```SHA-256
+16202127CB8DD585B7E48684CE5571C02C028E354839528B7222E6C056022926
+```
+
 ## Distribuování
 
 Za předpokladu, že jste developer, stačí si nastavit soubor podle svého gusta, a poté využít nové funkce na distribuci. Uživateli poté pošlete JEDEN soubor, který bude mít Vaše nastavení.
