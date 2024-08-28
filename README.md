@@ -1,5 +1,5 @@
 # PGP
-
+```SHA-256
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mDMEZs+EDhYJKwYBBAHaRw8BAQdA8wnX84i1ebtjUAX9bpCnzeLJjxUzE9KYN78p
@@ -13,4 +13,6 @@ NTOzbRsVZm/ihMKQayv9wNieoFSV5yLdxsN7ZBnpjbcBAOo1DkfzXKKanoFZedtq
 cy/MGPP+Xl/itfZlooVJqz4A
 =59Tg
 -----END PGP PUBLIC KEY BLOCK-----
+```
+
 
