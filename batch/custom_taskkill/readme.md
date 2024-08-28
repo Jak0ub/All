@@ -1,7 +1,7 @@
 ## Funguje pouze na Windows
 
 > ⚠️ **Upozornění:**
-> Windows Vám může zobrazit okno SmartScreen. Pokud máte obavy, můžete soubor vložit na VirusTotal, nebo můžete nahlédnout do kódu sanotného(Jedná se o OpenSource). Pokud kódu nerozumíte, nedoporučuji program spouštět, můžete totiž ukončit důležitý proces
+> Windows Vám může zobrazit okno SmartScreen. Pokud máte obavy, můžete soubor vložit na VirusTotal, nebo můžete nahlédnout do kódu samotného(Jedná se o OpenSource). Pokud kódu nerozumíte, nedoporučuji program spouštět, můžete totiž ukončit důležitý proces
 
 ## SHA-256
 ```SHA-256
