@@ -15,7 +15,3 @@ A3F62D55A57A466344C57A79C4DC837A2341EF3583C14538C8D664FA598764CD
 ## Popis
 Po zapnutí souboru se spustí CLI, ve kterém lze vyhledat dostupnost procesu. Pokud byl proces nalezen, bude uživatel dotázán jestli chce proces ukončit. V případě inputu 1 pro ANO, bude proces ukončen. V případě chyby je uživatel informován
 
-
-```batch
-main.bat
-```
