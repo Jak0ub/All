@@ -1,4 +1,7 @@
-## JEDNÁ SE O BATCH NIKOLI BASH, PROTO FUNGUJE POUZE NA WINDOWS
+## Funguje pouze na Windows
+
+> ⚠️ **Upozornění:**
+> Windows Vám může zobrazit okno SmartScreen. Pokud máte obavy, můžete soubor vložit na VirusTotal, nebo můžete nahlédnout do kódu sanotného(Jedná se o OpenSource). Pokud kódu nerozumíte, nedoporučuji program spouštět, můžete totiž ukončit důležitý proces
 
 ## SHA-256
 ```SHA-256
@@ -16,5 +19,3 @@ Po zapnutí souboru se spustí CLI, ve kterém lze vyhledat dostupnost procesu. 
 ```batch
 main.bat
 ```
-> ⚠️ **Varování:**
-> Lze pomocí tohoto souboru ukončit i systémové procesy
