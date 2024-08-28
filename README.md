@@ -1,4 +1,4 @@
-# Kontakt
+# PGP
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
