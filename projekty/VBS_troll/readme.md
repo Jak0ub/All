@@ -13,6 +13,9 @@
 Po každém zapnutí pc se zapne soubor troll.vbs a lze ho vypnout jen pomocí `taskkill` 
 
 
+> ℹ️ **Informace:**
+> Lze VBS proces ukončit i pomocí souboru na tomto githubu. Na mém profilu v cestě Main\batch\custom_taskkill\ je soubor pro ukončování procesů Vámi specifikovanými
+
 ```batch
 taskkill /IM "wscript.exe" -F
 ```
