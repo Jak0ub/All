@@ -17,4 +17,4 @@ Po zapnutí souboru se spustí CLI, ve kterém lze vyhledat dostupnost procesu. 
 main.bat
 ```
 > ⚠️ **Varování:**
-> Lze pomocí tohoto souboru ukončit i systémové soubory
+> Lze pomocí tohoto souboru ukončit i systémové procesy
