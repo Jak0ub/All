@@ -24,10 +24,11 @@ Za předpokladu, že jste developer, stačí si nastavit soubor podle svého gus
 
 ## Python to Executable
 
-```Instalace Pyinstaller
+```
 pip install pyinstaller
 ```
-```.Py to .Exe
+`Instalace Pyinstaller`
+```
 pyinstaller --onefile soubor.py
 ```
 `.Exe Soubor se nyní nachází v \dist\soubor.exe`
