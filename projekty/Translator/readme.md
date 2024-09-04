@@ -16,3 +16,14 @@ Jednoduše klikněte na projekt `lang.py`  a stáhněte tzv."raw file". Samotný
 
 > ℹ️ **Informace:**
 > Je snad jasné, že pro spuštění bude potřeba `Python`
+
+## Python to Executable
+
+```
+pip install pyinstaller
+```
+`Instalace Pyinstaller`
+```
+pyinstaller --onefile soubor.py
+```
+`.Exe Soubor se nyní nachází v \dist\soubor.exe`
