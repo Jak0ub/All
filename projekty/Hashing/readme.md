@@ -14,4 +14,4 @@ Lze si pomocí souboru `Create.py` vytvořit hash
 Jednoduše klikněte na projekt (funguje na všechny systémy) a stáhněte tzv."raw file". Samotný program Vám poté popíše co a jak
 
 > ℹ️ **Informace:**
-> Je snad jasné, že pro spuštění bude potřeba `python`
+> Je snad jasné, že pro spuštění bude potřeba `Python`
