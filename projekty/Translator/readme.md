@@ -1,4 +1,4 @@
-# Překladač
+# Překladač 
 
 ## SHA-256
 ```SHA-256
@@ -7,7 +7,7 @@
 
 ## O projektu
 
-Projekt zaměřený pro ty, kteří si chtějí procvičit cizí jazyk. Soubor je na všechny OS. Doufám, že Vám v učení pomůže.
+Projekt zaměřený pro ty, kteří si chtějí procvičit cizí jazyk. Soubor je na všechny OS. Doufám, že Vám v učení pomůže. Jedná se o CLI!
 > ⚠️ **Upozornění:**
 > Soubor může mít chyby, při nalezení některé z nich mě prosím kontaktujte
 
@@ -20,11 +20,11 @@ Jednoduše klikněte na projekt `lang.py`  a stáhněte tzv."raw file". Samotný
 
 Windows cmd
 ```batch
-Main.py
+lang.py
 ```
 Linux shell
 ```shell
-python3 Main.py
+python3 lang.py
 ```
 ### Lze také dvakrát kliknout na soubor u systému Windows
 > ⚠️ **Varování:**
