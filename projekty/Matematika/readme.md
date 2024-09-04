@@ -22,4 +22,13 @@ Jednoduše klikněte na projekt `Main.py` (funguje na všechny systémy) a stáh
 
 Za předpokladu, že jste developer, stačí si nastavit soubor podle svého gusta, a poté využít nové funkce na distribuci. Uživateli poté pošlete JEDEN soubor, který bude mít Vaše nastavení.
 
+## PY TO EXE
+
+```Instalace Pyinstaller
+pip install pyinstaller
+```
+```.Py to .Exe
+pyinstaller --onefile soubor.py
+```
+`.Exe Soubor se nyní nachází v \dist\soubor.exe`
 
