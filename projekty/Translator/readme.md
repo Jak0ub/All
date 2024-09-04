@@ -12,11 +12,10 @@ Projekt zaměřený pro ty, kteří si chtějí procvičit cizí jazyk. Soubor j
 > Soubor může mít chyby, při nalezení některé z nich mě prosím kontaktujte
 
 ## Stáhnutí
-> ℹ️ **Informace:**
-> Je snad jasné, že pro spuštění bude potřeba `python`
 Jednoduše klikněte na projekt `lang.py`  a stáhněte tzv."raw file". Samotný program Vám poté popíše co a jak
 
-
+> ℹ️ **Informace:**
+> Je snad jasné, že pro spuštění bude potřeba `python`
 ## Spouštění
 
 Windows cmd
