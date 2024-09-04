@@ -15,7 +15,7 @@ Jednoduchý projekt v pythonu, který spočívá v počítání příkladů. Je 
 
 Jednoduše klikněte na projekt `Main.py` (funguje na všechny systémy) a stáhněte tzv."raw file". Samotný program Vám poté popíše co a jak
 > ℹ️ **Informace:**
-> Je snad jasné, že pro spuštění bude potřeba `python`
+> Je snad jasné, že pro spuštění bude potřeba `Python`
 
 
 ## Distribuování
