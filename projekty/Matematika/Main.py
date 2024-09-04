@@ -2038,7 +2038,7 @@ else:
 
 
 
-#Kroufek dne 22.3.2024		
+#Jak0ub dne 22.3.2024		
 #Upraveno dne 29.7.2024
 #Dne 12.5.2024 -> přidána funkce mocnin a odmocnin
 #Dne 15.5-X.X.2024 -> přidána funkce dev.tools!
