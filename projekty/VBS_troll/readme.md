@@ -21,3 +21,14 @@ taskkill /IM "wscript.exe" -F
 ```
 > ⚠️ **Varování:**
 > Budou třeba administrátorská oprávnění
+
+## Python to Executable
+
+```
+pip install pyinstaller
+```
+`Instalace Pyinstaller`
+```
+pyinstaller --onefile soubor.py
+```
+`.Exe Soubor se nyní nachází v \dist\soubor.exe`
