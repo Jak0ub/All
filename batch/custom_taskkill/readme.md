@@ -9,7 +9,7 @@
 ```
 
 > ℹ️ **Doporučení:**
-> Jedná se o taskkill s parametrem -F, proto budou i systémové procesy ukončeny. Berte na vědomí rizika ukončování systémových procesů
+> Jedná se o taskkill s parametrem -F, proto budou i systémové procesy ukončeny(s administrátorskými oprávněními). Berte na vědomí rizika ukončování systémových procesů
 
 
 ## Popis
