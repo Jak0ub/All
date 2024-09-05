@@ -17,4 +17,4 @@ Po zapnutí souboru se spustí CLI, ve kterém lze vyhledat dostupnost procesu. 
 
 
 > ⚠️ **Varování:**
-> `Je možné ze se program zmýlí a vyhodnotí konečnou zprávu špatně.`
+> `NESPUSŤTE JAKO ADMINISTRÁTOR, POKUD NECHCETE UKONČIT SYSTÉMOVÉ PROCESY`
