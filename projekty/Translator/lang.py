@@ -85,7 +85,7 @@ while True:
 		cisto()
 		continue		
 	if choice != 1 and choice != 2 and choice != 3 and choice != 4 and choice != 5:
-		print("\t\t1, 2 nebo 3!")
+		print("\t\t1, 2, 3, 4 nebo 5!")
 		time.sleep(1)		
 		cisto()
 		continue
