@@ -27,8 +27,7 @@ Projekt zaměřený pro ty, kteří si chtějí procvičit cizí jazyk. Soubor j
 
 ## Popis
 
-Bude dobré si něco zjistit, například defaultní uživatel je `admin` a heslo je `Password`. Tento model je náročnější, proto doporučuji nejprve odzkoušet, až poté užívat v praxi. Pokud naleznete chybu nebo by jste mi doporučili vylepšení, kontaktujtě mě. Pokud máte obavy o soukromí, je možnost zprávu zašifrovat přes mnou uvedený PGP public key. Děkuji
-
+Bude dobré si něco zjistit, například defaultní uživatel je `admin` a heslo je `Password`. Tento model je náročnější, proto doporučuji nejprve odzkoušet, až poté užívat v praxi.
 
 ## Stáhnutí
 Jednoduše klikněte na projekt `lang.py`  a stáhněte tzv."raw file". Samotný program Vám poté popíše co a jak
