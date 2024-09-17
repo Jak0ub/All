@@ -1,4 +1,4 @@
-# Matematika (první větší projekt)
+# Matematika
 
 ## SHA-256
 ```SHA-256
