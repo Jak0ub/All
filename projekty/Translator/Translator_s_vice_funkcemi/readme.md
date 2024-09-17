@@ -30,7 +30,7 @@ Projekt zaměřený pro ty, kteří si chtějí procvičit cizí jazyk. Soubor j
 Bude dobré si něco zjistit, například defaultní uživatel je `admin` a heslo je `Password`. Tento model je náročnější, proto doporučuji nejprve odzkoušet, až poté užívat v praxi.
 
 ## Stáhnutí
-Jednoduše klikněte na projekt `lang.py`  a stáhněte tzv."raw file". Samotný program Vám poté popíše co a jak
+Jednoduše klikněte na projekt `main.py`  a stáhněte tzv."raw file". Samotný program Vám poté popíše co a jak
 
 > ℹ️ **Informace:**
 > Je snad jasné, že pro spuštění bude potřeba `Python`
