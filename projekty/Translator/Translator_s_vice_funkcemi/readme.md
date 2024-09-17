@@ -7,13 +7,13 @@
 ## K úvodu
 
 `1.`
-> Pro uživatekské výsledky budete potřebovat `Vysledky.txt` soubor. Soubor je zahashovaný! V programu samotném jsou data ovšem čitelná
+Pro uživatekské výsledky budete potřebovat `Vysledky.txt` soubor. Soubor je zahashovaný! V programu samotném jsou data ovšem čitelná
 
 `2.`
-> Pro všechna uživatelská jména a hesla budete potřebovat `credentials.file` soubor, který je také zahashovaný!
+Pro všechna uživatelská jména a hesla budete potřebovat `credentials.file` soubor, který je také zahashovaný!
 
 `3.`
-> Pro všechna slovíška a jejich překlad budete potřebovat `words_configFile.txt` soubor. Není hashovaný!
+Pro všechna slovíška a jejich překlad budete potřebovat `words_configFile.txt` soubor. Není hashovaný!
 
 ### ⚠️ Všechny tyto soubory jsou automaticky vytvořeny pokud chybí, takže pokud Vám záleží na obsahu některého ze souborů, budete muset soubor sdílet mezi zařízeními, na kterých tento obsah chcete mít⚠️
 
