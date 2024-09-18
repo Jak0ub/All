@@ -617,13 +617,7 @@ while True:
 			cisto()
 		except FileNotFoundError:
 			input("Žádné výsledky nejsou k dispozici, Enter pro pokračování")
-			cisto()
-			
-				
+			cisto()				
 #Jak0ub dne 04.09.2024
 #Dne 17.9.2024 -> přidána funkce průměru úspěšnosti (Chystá se nová funkce pro session cookie)
-			
-
-		
-					
-
+#Dne 18.9.2024 -> přidána funkce mazání uživatelů a úpravy hesel. Také redesign menu pro uživatele a admina. Oprava chyby duplicitních jmen v register sekci	
