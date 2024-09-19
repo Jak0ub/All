@@ -10,12 +10,12 @@
 Pro uživatekské výsledky budete potřebovat `Vysledky.txt` soubor. Soubor je zahashovaný! V programu samotném jsou data ovšem čitelná
 
 `2.`
-Pro všechna uživatelská jména a hesla budete potřebovat `credentials.file` soubor, který je také zahashovaný!
+Pro všechna uživatelská jména a hesla budete potřebovat `credentials.txt` soubor, který je také zahashovaný!
 
 `3.`
 Pro všechna slovíška a jejich překlad budete potřebovat `words_configFile.txt` soubor. Není hashovaný!
 > ❕ **Důležité:**
-> Pokud chcete zamezit modifikaci ostatními uživateli,(pokud plánujete soubor distribuovat. Například na školní síti) upravte oprávnění souborů na Read-only pro koncové uživatele. Ovšem soubor `Vysledky.txt` NIKDY nedávejte jako Read-only, jinak se výsledky uživatelů nezapíšou
+> Pokud chcete zamezit modifikaci ostatními uživateli,(pokud plánujete soubor distribuovat. Například na školní síti) upravte oprávnění souborů na Read-only pro koncové uživatele. Ovšem soubor `Vysledky.txt` NIKDY nedávejte jako Read-only, jinak se výsledky uživatelů nezapíšou. Zbývající dva soubory nastavte na Read-only až po konfiguraci. Pokud to uděláte před konfigurací, tak budete muset program spouštět jako admin.       
 
 
 ### ⚠️ Všechny tyto soubory jsou automaticky vytvořeny pokud chybí, takže pokud Vám záleží na obsahu některého ze souborů, budete muset soubor sdílet mezi zařízeními, na kterých tento obsah chcete mít⚠️
