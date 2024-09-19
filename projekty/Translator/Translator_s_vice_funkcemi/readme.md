@@ -15,7 +15,7 @@ Pro všechna uživatelská jména a hesla budete potřebovat `credentials.file` 
 `3.`
 Pro všechna slovíška a jejich překlad budete potřebovat `words_configFile.txt` soubor. Není hashovaný!
 > ❕ **Důležité:**
-> Pokud chcete zamezit modifikaci ostatními uživateli,(pokud plánujete soubor distribuovat. Například na školní síti) upravte oprávnění souborů na Read-only pro koncové uživatele. Ovšem soubor výsledky NIKDY nedávejte jako Read-only, jinak se výsledky uživatelů nezapíšou
+> Pokud chcete zamezit modifikaci ostatními uživateli,(pokud plánujete soubor distribuovat. Například na školní síti) upravte oprávnění souborů na Read-only pro koncové uživatele. Ovšem soubor `Vysledky.txt` NIKDY nedávejte jako Read-only, jinak se výsledky uživatelů nezapíšou
 
 
 ### ⚠️ Všechny tyto soubory jsou automaticky vytvořeny pokud chybí, takže pokud Vám záleží na obsahu některého ze souborů, budete muset soubor sdílet mezi zařízeními, na kterých tento obsah chcete mít⚠️
